@@ -1,0 +1,35 @@
+# Approval policy. Consumed only by app/rules/policy.py (deterministic).
+auto_pay:
+  max_amount_cents: 500000          # $5,000
+  require_trusted_vendor: true
+  require_full_match: true
+  max_risk_score: 20
+  block_flagged_vendors: true       # a vendor flagged by an ACH return needs a human until cleared
+dual_approval:
+  min_amount_cents: 5000000         # $50,000
+  rails_always_dual: [wire]
+  instant_min_amount_cents: 2500000 # RTP/FedNow >= $25k -> dual
+hard_blocks: [OFAC_HIT]
+hold_until_callback: [BANK_DETAILS_CHANGED, BANK_CHANGE_VIA_EMAIL]
+# Never auto-pay, never hard-block: always route to a human (at least single approval; a stricter
+# rule such as dual approval still wins). Duplicate invoice numbers can be legitimate, depending on
+# how the vendor's accounting system numbers invoices, so a reviewer decides.
+force_review: [DUPLICATE_INVOICE]
+match:
+  po_amount_tolerance_pct: 2
+vendor_trust:
+  min_settled_payments: 3           # vendor becomes `trusted` after N clean settled payments
+intake:
+  min_field_confidence: 0.6         # below this, the field goes to human review
+  required_fields: [vendor_name, invoice_number, invoice_date, amount]
+vendor_resolution:
+  fuzzy_min: 90                     # token_sort_ratio on normalized names (0-100)
+  # Embeddings are consulted only when fuzzy is inconclusive. nomic-embed-text puts the right vendor
+  # first by a wide margin but with absolute cosines of ~0.78-0.91, so require both a floor and a margin.
+  embedding_min: 0.75               # cosine similarity of the best candidate
+  embedding_margin: 0.20            # best must beat the runner-up by this much
+  embedding_fuzzy_floor: 55         # unrelated names sharing one word score 40-50; real variants 60+
+  ambiguity_margin: 3               # top-2 candidates closer than this -> ambiguous
+reconciliation:
+  fallback_date_window_days: 2      # amount+date matching when the reference is missing
+  missing_settlement_grace_days: 2  # business days past expected settlement before raising an exception

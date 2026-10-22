@@ -1,0 +1,15 @@
+# Fraud signal weights and risk thresholds. Risk score = sum of fired signal weights (capped at 100).
+signals:
+  BANK_DETAILS_CHANGED:  { weight: 40 }
+  BANK_CHANGE_VIA_EMAIL: { weight: 40 }
+  LOOKALIKE_VENDOR:      { weight: 35, name_similarity_min: 90, domain_similarity_min: 85 }
+  DUPLICATE_INVOICE:     { weight: 50, window_days: 30 }
+  AMOUNT_ANOMALY:        { weight: 20, sigma: 3, min_history: 3, min_sd_pct: 10 }  # sd floor as % of mean
+  FIRST_TIME_PAYEE:      { weight: 15 }
+  NEW_ACCOUNT_RECENT:    { weight: 25, days: 30 }
+  URGENCY_LANGUAGE:      { weight: 10, quote_match_min: 90 }  # LLM quote must be found in the document
+  OFAC_HIT:              { weight: 100, name_similarity_min: 90 }
+thresholds:
+  low: 20       # <= low: clean
+  high: 60      # >= high: high risk
+max_score: 100

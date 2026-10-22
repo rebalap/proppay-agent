@@ -1,0 +1,32 @@
+[project]
+name = "proppay-agent"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "faker",
+    "fastapi",
+    "httpx",
+    "langchain-ollama",
+    "langgraph",
+    "langgraph-checkpoint-sqlite",
+    "pandas",
+    "pdfplumber",
+    "plotly",
+    "pydantic",
+    "python-dotenv",
+    "pyyaml",
+    "rapidfuzz",
+    "reportlab",
+    "sqlmodel",
+    "streamlit",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["ollama: needs a running Ollama server with OLLAMA_MODEL pulled"]

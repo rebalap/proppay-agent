@@ -1,0 +1,6 @@
+Invoice: $invoice_number from $vendor_name for $amount
+Received via: $channel $sender
+Risk score: $risk_score / 100
+
+Signals detected by the rules engine:
+$signals

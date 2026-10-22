@@ -1,0 +1,29 @@
+# Payment rail economics. Illustrative values — tune here, never in code.
+# Money in integer cents. Cutoffs are local bank time (see timezone).
+timezone: America/New_York
+
+rails:
+  ach_standard: { fee_cents: 25,   settle_days: 1, max_cents: null,       cutoff: "17:00", irrevocable: false }
+  ach_same_day: { fee_cents: 100,  settle_days: 0, max_cents: 100000000,  cutoff: "14:45", irrevocable: false }
+  rtp:          { fee_cents: 50,   settle_days: 0, max_cents: 1000000000, always_on: true, irrevocable: true }
+  fednow:       { fee_cents: 45,   settle_days: 0, max_cents: 1000000000, always_on: true, irrevocable: true }
+  wire:         { fee_cents: 2500, settle_days: 0, max_cents: null,       cutoff: "16:30", irrevocable: true }
+  virtual_card: { fee_cents: 0,    settle_days: 0, max_cents: null, rebate_bps: 100, requires: card_accepting, irrevocable: false }
+  check:        { fee_cents: 300,  settle_days: 5, max_cents: null, positive_pay: true, irrevocable: false }
+
+# Used to decide whether an early-pay discount is worth capturing (annualized).
+cost_of_capital_annual_bps: 800
+
+# Instant rails (RTP/FedNow) are irrevocable: only when the payment is urgent AND risk is low.
+instant_max_risk_score: 20
+# Business days skip weekends only; Fed holidays are not modelled in this POC.
+
+# Our side of every payment (fictional). NACHA immediate origin / ODFI = our bank.
+originator:
+  company_name: BLUESTEM RESIDENTIAL
+  company_id: "1870000001"          # "1" + EIN, NACHA convention
+  odfi_routing: "099999999"         # fictional, passes the ABA checksum
+  odfi_name: PROPPAY MOCK BANK
+  operating_account: "000123450001" # funding account for checks / positive pay
+  entry_description: VENDOR PAY
+  first_check_number: 10001

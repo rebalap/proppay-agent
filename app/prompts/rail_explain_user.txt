@@ -1,0 +1,10 @@
+Vendor: $vendor
+Amount: $amount
+Chosen rail: $rail, send $send_date, settles $settle_date (target $target_date)
+Fee: $fee   Card rebate: $rebate   Early-pay discount: $discount
+
+Optimizer reasoning:
+$reasons
+
+Alternatives considered:
+$options

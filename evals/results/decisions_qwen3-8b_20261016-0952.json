@@ -1,0 +1,514 @@
+{
+  "model": "qwen3:8b",
+  "decision_accuracy": 1.0,
+  "signal_accuracy": 0.96,
+  "extraction_accuracy": 0.9963636363636363,
+  "stp": 0.84,
+  "rows": [
+    {
+      "file": "01_sentinel_SPS-1923.pdf",
+      "case": 1,
+      "seconds": 13.7,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "02_lakeside_LPC-5424.pdf",
+      "case": 8,
+      "seconds": 18.6,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": false,
+      "signals": [
+        "URGENCY_LANGUAGE"
+      ],
+      "expected_signals": [],
+      "urgency": true,
+      "risk": 10,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": "The invoice includes urgency language that may pressure the reviewer into quick decisions without proper verification. This could be a tactic used in fraud schemes to expedite payments.",
+      "field_errors": [],
+      "pressure_quote": "2% discount if paid within 10 days of invoice date."
+    },
+    {
+      "file": "03_capital_CE2881.pdf",
+      "case": 1,
+      "seconds": 15.4,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "04_hilltop_HR-3907.pdf",
+      "case": 1,
+      "seconds": 14.0,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "05_freshcoat_FCP-5514.pdf",
+      "case": 1,
+      "seconds": 15.4,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "06_vertex_VES-6713.pdf",
+      "case": 1,
+      "seconds": 15.4,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "07_bluewave_BW1568.pdf",
+      "case": 1,
+      "seconds": 13.0,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "08_metrowaste_MWH-2962.pdf",
+      "case": 1,
+      "seconds": 12.1,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "09_keystone_KLK-3340.pdf",
+      "case": 7,
+      "seconds": 16.8,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "10_clearview_CV-2673.pdf",
+      "case": 1,
+      "seconds": 11.8,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "11_oakridge_OAR-1623.pdf",
+      "case": 1,
+      "seconds": 27.5,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "12_prairie_PFC-6089.pdf",
+      "case": 1,
+      "seconds": 14.9,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "13_riverbend_RFP-3870.pdf",
+      "case": 1,
+      "seconds": 15.6,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "14_bluebonnet_BBI-1320.pdf",
+      "case": 1,
+      "seconds": 14.3,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "15_northgate_NGM-6447.pdf",
+      "case": 1,
+      "seconds": 13.5,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "16_cedar_CJR-1009.pdf",
+      "case": 1,
+      "seconds": 14.0,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "17_signal_SIG-6516.pdf",
+      "case": 1,
+      "seconds": 13.2,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "18_apex_APX-1878.pdf",
+      "case": 1,
+      "seconds": 12.1,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "19_acme_AP-4686.pdf",
+      "case": 2,
+      "seconds": 27.9,
+      "expected": "HOLD_CALLBACK",
+      "got": "HOLD_CALLBACK",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [
+        "BANK_CHANGE_VIA_EMAIL",
+        "BANK_DETAILS_CHANGED",
+        "LOOKALIKE_VENDOR",
+        "URGENCY_LANGUAGE"
+      ],
+      "expected_signals": [
+        "BANK_DETAILS_CHANGED",
+        "BANK_CHANGE_VIA_EMAIL",
+        "LOOKALIKE_VENDOR"
+      ],
+      "urgency": true,
+      "risk": 100,
+      "reasons": [
+        "hold_until_callback: BANK_CHANGE_VIA_EMAIL (call the vendor on a known number before paying)",
+        "hold_until_callback: BANK_DETAILS_CHANGED (call the vendor on a known number before paying)"
+      ],
+      "rationale": "This invoice is highly risky due to changed bank details, a suspicious email requesting payment updates, and a lookalike vendor domain. The urgency language also raises concerns about potential fraud or coercion.",
+      "field_errors": [
+        "remit_last4"
+      ],
+      "pressure_quote": "We need this invoice paid today - our crews cannot be dispatched to your properties until the account is current."
+    },
+    {
+      "file": "20_greenleaf_INV-1043-A.pdf",
+      "case": 3,
+      "seconds": 20.5,
+      "expected": "SINGLE_APPROVAL",
+      "got": "SINGLE_APPROVAL",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [
+        "DUPLICATE_INVOICE"
+      ],
+      "expected_signals": [
+        "DUPLICATE_INVOICE"
+      ],
+      "urgency": false,
+      "risk": 50,
+      "reasons": [
+        "auto_pay.require_full_match: 3-way match is partial",
+        "auto_pay.max_risk_score: risk 50 > 20",
+        "force_review: DUPLICATE_INVOICE"
+      ],
+      "rationale": "The invoice appears to be a duplicate of a previously paid invoice, which raises concerns about potential fraud or billing errors. This could indicate a vendor attempting to charge for services already rendered or a system error leading to duplicate payments.",
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "21_polar_PA-6755.pdf",
+      "case": 4,
+      "seconds": 21.8,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [
+        "URGENCY_LANGUAGE"
+      ],
+      "expected_signals": [],
+      "urgency": true,
+      "risk": 10,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": "The invoice includes urgent language urging immediate payment, which can be a tactic used in fraud to pressure quick decisions without proper verification. This increases the risk of paying a fraudulent request.",
+      "field_errors": [],
+      "pressure_quote": "Payment due on receipt"
+    },
+    {
+      "file": "22_summit_SBG-PA-006.pdf",
+      "case": 5,
+      "seconds": 23.4,
+      "expected": "DUAL_APPROVAL",
+      "got": "DUAL_APPROVAL",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "dual_approval.min_amount_cents: $480,000.00 >= $50,000.00"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "23_brightclean_BC-1905.pdf",
+      "case": 6,
+      "seconds": 15.7,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "24_lonestar_LS2303.pdf",
+      "case": 6,
+      "seconds": 12.2,
+      "expected": "AUTO_APPROVE",
+      "got": "AUTO_APPROVE",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [],
+      "expected_signals": [],
+      "urgency": false,
+      "risk": 0,
+      "reasons": [
+        "auto_pay: trusted vendor, full 3-way match, low risk, within limit"
+      ],
+      "rationale": null,
+      "field_errors": [],
+      "pressure_quote": null
+    },
+    {
+      "file": "25_meridian_MSL-3867.pdf",
+      "case": 9,
+      "seconds": 27.0,
+      "expected": "BLOCK",
+      "got": "BLOCK",
+      "decision_ok": true,
+      "signals_ok": true,
+      "signals": [
+        "FIRST_TIME_PAYEE",
+        "NEW_ACCOUNT_RECENT",
+        "OFAC_HIT"
+      ],
+      "expected_signals": [
+        "OFAC_HIT",
+        "FIRST_TIME_PAYEE",
+        "NEW_ACCOUNT_RECENT"
+      ],
+      "urgency": false,
+      "risk": 100,
+      "reasons": [
+        "hard_blocks: OFAC_HIT"
+      ],
+      "rationale": "The invoice is flagged for potential sanctions exposure due to a match with an OFAC-listed entity. The payee is also a first-time vendor with a recently created bank account, raising concerns about legitimacy.",
+      "field_errors": [],
+      "pressure_quote": null
+    }
+  ]
+}

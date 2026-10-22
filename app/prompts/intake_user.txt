@@ -1,0 +1,5 @@
+Source: $source_type
+
+<document>
+$document_text
+</document>

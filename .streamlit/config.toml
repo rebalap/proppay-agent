@@ -1,0 +1,16 @@
+# Local-only POC: nothing leaves the machine.
+[browser]
+gatherUsageStats = false
+
+[server]
+address = "localhost"
+headless = true
+
+# One consistent light theme so status colours and badges read the same everywhere (and on video).
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#fcfcfb"
+secondaryBackgroundColor = "#f3f2ef"
+textColor = "#0b0b0b"
+font = "sans serif"

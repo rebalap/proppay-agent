@@ -1,0 +1,5 @@
+Vendor: $vendor
+Invoice: $invoice_number
+Amount: $amount
+Payment sent: $sent_date (ACH, settled $settle_date)
+Returned: $return_date with code $return_code - $return_reason
